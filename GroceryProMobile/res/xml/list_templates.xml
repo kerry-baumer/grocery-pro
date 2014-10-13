@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+	<template name="Default">
+		<category name="MEAT/POULTRY/FISH">
+			<item>Chicken Breast</item>
+			<item>Lamb Chops</item>	
+			<item>Turkey Breast</item>
+			<item>Roast Beef</item>
+			<item>Hot Dogs</item>
+		</category>
+
+		<category name="CHEESE/EGGS/YOGURT">
+			<item>Cheese Sticks</item>
+			<item>American Cheese</item>
+			<item>Shredded Mozzarella</item>
+			<item>Ricotta</item>
+			<item>Eggs</item>
+			<item text="1">Yogurt</item>
+		</category>
+
+		<category name="SERVICE DELI">
+			<item>Chicken Tenders</item>
+			<item>Potato Wedges</item>
+			<item>Tuna</item>
+			<item>Sliced Turkey</item>
+		</category>
+
+		<category name="BREADS">
+			<item>Potato Bread</item>
+			<item>Bagels</item>
+			<item text="1">Buns</item>
+			<item>Flour Tortillas</item>
+		</category>
+
+		<category name="CEREAL/BREAKFAST">
+			<item>Oat Squares</item>
+			<item>Cheerios Plain</item>
+			<item>Multi Grain Cheerios</item>
+			<item>Oatmeal</item>
+			<item>Granola Bars</item>
+		</category>
+
+		<category name="CRACKERS/COOKIES">
+			<item>Ritz Cracker</item>
+			<item>Goldfish</item>
+			<item>Baked Lays</item>
+			<item>Pretzel Sticks</item>
+			<item>Oreos</item>
+			<item>Milanos</item>
+			<item text="1">Ice Cream</item>
+		</category>
+
+		<category name="DRESSING/OILS">
+			<item>Canola Oil</item>
+			<item>Olive Oil</item>
+			<item>Balsamic Vinaigrette</item>
+			<item>Vinaigrette</item>
+			<item>French Dressing</item>
+		</category>
+		<category name="COOKING ITEMS">
+			<item>Flour</item>
+			<item>Sugar</item>
+			<item>Powder Sugar</item>
+			<item>Chocolate Chips</item>
+			<item>Baking Soda</item>
+			<item>Baking Powder</item>
+			<item>Cooking Spray</item>
+			<item>Bread Crumbs</item>
+		</category>
+
+		<category name="FRUITS/VEGGIES">
+			<item>Bananas</item>
+			<item>Strawberries</item>
+			<item>Cantaloupe</item>
+			<item>Apples    red/green</item>
+			<item>Grapes   red/green</item>
+			<item>Lemon</item>
+			<item>Onion</item>
+			<item>Potatoes    brown/red</item>
+			<item>Lettuce   head/bagged</item>
+			<item>Tomatoes   reg/cherry</item>
+			<item>Pepper  red/yellow/grn</item>
+			<item>Carrots</item>
+			<item>Mushroom</item>
+			<item>Squash</item>
+			<item>Zucchini</item>
+			<item>Cucumber</item>
+			<item>Corn</item>
+			<item>Garlic</item>
+		</category>
+
+		<category name="CANNED/BOX/BAG">
+			<item>Easy Mac</item>
+			<item>Penne Pasta</item>
+			<item>Pasta Sauce</item>
+			<item>Rice</item>
+			<item text="1">Beans</item>
+			<item>Dried Cranberry</item>
+			<item>Canned Pineapple</item>
+			<item>Chicken Broth</item>
+			<item>Apple Sauce</item>
+			<item>Peanut Butter</item>
+			<item>Jelly</item>
+		</category>
+
+		<category name="FROZEN">
+			<item>Peas</item>
+			<item>Corn</item>
+			<item>French Fries</item>
+			<item>Waffles</item>
+		</category>
+
+		<category name="DRINKS/JUICES">
+			<item>Milk</item>
+			<item>Orange Juice</item>
+			<item>Red Grape Juice</item>
+			<item>Coffee</item>
+			<item text="1">Tea</item>
+			<item>Lemonade boxes</item>
+			<item>Apple Juice boxes</item>
+			<item>Coke</item>
+		</category>
+
+		<category name="PERSONAL SUPPIES">
+			<item>Dove Soap</item>
+			<item>Toothpaste</item>
+			<item>Kids Toothpaste</item>
+			<item>Floss</item>
+			<item>Shampoo</item>
+			<item>Conditioner</item>
+			<item>Kids Shampoo</item>
+			<item>Tampax</item>
+		</category>
+
+		<category name="PAPER GOODS">
+			<item>Napkins</item>
+			<item>Paper   plates/bowls</item>
+			<item>Plastic Cups</item>
+			<item>Plastic  Knive/Fork/Spn</item>
+			<item>Paper Towels</item>
+			<item>Toilet Paper</item>
+		</category>
+
+		<category name="CLEANING SUPPLIES">
+			<item>Dishwashing Liquid</item>
+			<item>All</item>
+			<item>Clorox</item>
+			<item>Shout</item>
+			<item>Comet</item>
+			<item>Tilex</item>
+			<item>Sponges</item>
+			<item>Rubber Gloves</item>
+		</category>
+
+		<category name="BABY">
+			<item>Diapers</item>
+			<item>Wipes</item>
+			<item>Balmex</item>
+			<item>Applesauce</item>
+			<item>Bananas</item>
+			<item>Peas</item>
+			<item>Carrots</item>
+			<item>Formula</item>
+		</category>
+
+		<category name="MISC">
+			<item>Flowers</item>
+			<item>Candles</item>
+		</category>
+	</template>
+</templates>

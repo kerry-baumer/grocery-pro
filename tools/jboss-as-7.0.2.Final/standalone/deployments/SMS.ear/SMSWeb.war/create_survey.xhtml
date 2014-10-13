@@ -1,0 +1,40 @@
+<!DOCTYPE html
+      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xml:lang="en" lang="en">
+
+
+ 
+
+<h:body>       
+
+    <ui:composition template="main_template.xhtml">
+    <ui:param name="title" value="Create New Survey"/>
+    <ui:define name="content">
+	<h3> Create New Survey </h3> <br/>
+     	<div align="center">
+      		<h:form id="CreateSurvey">
+      		<table>
+      			<tr>
+				<h:selectOneMenu id="selectOneCb" value="#{createSurveyBean.selectedTemplate}">
+					<f:selectItem itemLabel="Select Template" itemValue="" />
+						<f:selectItems value="#{createSurveyBean.templates}" />
+				</h:selectOneMenu>
+				<h:message for="selectOneCb"  errorStyle="color:red"/>
+      			</tr>
+      			<tr><td>
+				<h:commandButton id="create" action="#{createSurveyBean.createSurvey}" value="Create" />
+      			</td></tr>
+      		</table>
+    		</h:form>
+    	</div>     
+     </ui:define>
+  </ui:composition>
+</h:body>
+
+
+</html>

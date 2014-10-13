@@ -1,0 +1,94 @@
+package mil.navy.safecen.sms.client.controllers;
+
+import java.util.List;
+
+import mil.navy.safecen.sms.client.ClientFactory;
+import mil.navy.safecen.sms.client.panels.QuestionListViewImpl;
+import mil.navy.safecen.sms.core.broker.ResultCallback;
+import mil.navy.safecen.sms.core.event.EventBus;
+import mil.navy.safecen.sms.core.model.Question;
+import mil.navy.safecen.sms.core.model.Survey;
+import mil.navy.safecen.sms.core.presenter.QuestionDetailsPresenter;
+import mil.navy.safecen.sms.core.presenter.QuestionDetailsPresenterImpl;
+import mil.navy.safecen.sms.core.presenter.QuestionListPresenter;
+import mil.navy.safecen.sms.core.presenter.QuestionListPresenterImpl;
+import mil.navy.safecen.sms.core.presenter.SurveyListPresenter;
+import mil.navy.safecen.sms.core.presenter.SurveyListPresenterImpl;
+import mil.navy.safecen.sms.core.shared.AppController;
+import mil.navy.safecen.sms.core.view.QuestionListItem;
+import mil.navy.safecen.sms.core.view.SurveyListItem;
+
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.DecoratedPopupPanel;
+import com.google.gwt.user.client.ui.PopupPanel;
+
+public class GWTAppController extends AppController {
+
+	private SurveyListPresenter listPresenter;
+	private QuestionListPresenter questionPresenter;
+	private QuestionDetailsPresenter detailsPresenter;
+	private EventBus eventBus;
+	private ClientFactory factory;
+	private DecoratedPopupPanel popUp = new DecoratedPopupPanel();
+
+	public GWTAppController(final ClientFactory factory) {
+		super(factory.getEventBus());
+		this.eventBus = factory.getEventBus();
+		this.factory = factory;
+		
+		popUp.setWidget((QuestionListViewImpl) factory.getQuestionPanel());
+		popUp.setGlassEnabled(true);
+		popUp.setAnimationEnabled(true);
+		popUp.setModal(true);
+		popUp.hide();
+		
+		// create presenters 
+		listPresenter = new SurveyListPresenterImpl(eventBus, factory.getDataBroker(), factory.getListPanel());
+		questionPresenter = new QuestionListPresenterImpl(eventBus, factory.getDataBroker(), factory.getQuestionPanel());
+		detailsPresenter = new QuestionDetailsPresenterImpl(((QuestionListViewImpl) factory.getQuestionPanel()).getDetailsPanel());
+		
+		// set them into the views
+		factory.getListPanel().setPresenter(listPresenter);
+		factory.getQuestionPanel().setPresenter(questionPresenter);
+		
+		// load surveys
+		listPresenter.loadSurveyList(new ResultCallback<List<SurveyListItem>>() {
+			public void onResult(List<SurveyListItem> list) {
+				factory.getListPanel().getSurveyList().setData(list);
+			}
+		});
+	}
+
+	@Override
+	protected void onCreateSurvey() {
+	}
+
+	@Override
+	protected void onSurveySelected(Survey survey) {
+		popUp.setPopupPositionAndShow(new PopupPanel.PositionCallback() {
+	          public void setPosition(int offsetWidth, int offsetHeight) {
+	            int left = (Window.getClientWidth() - offsetWidth) / 3;
+	            int top = (Window.getClientHeight() - offsetHeight) / 3;
+	            popUp.setPopupPosition(left, top);
+	          }
+	        });
+		questionPresenter.loadQuestionList(survey.getKey(), new ResultCallback<List<QuestionListItem>>() {
+			public void onResult(List<QuestionListItem> list) {
+				factory.getQuestionPanel().getQuestionList().setData(list);
+			}
+		});
+	}
+	
+	@Override
+	protected void onQuestionSelected(Question question){
+		((QuestionListViewImpl) factory.getQuestionPanel()).getDetailsPanel().setVisible(true);
+		detailsPresenter.loadDetails(question);
+	}
+
+	@Override
+	protected void onQuestionListWindowClosed() {
+		((QuestionListViewImpl) factory.getQuestionPanel()).getDetailsPanel().setVisible(false);
+		popUp.hide();
+		
+	}
+}

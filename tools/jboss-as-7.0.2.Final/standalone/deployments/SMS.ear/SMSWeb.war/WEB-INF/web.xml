@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>file-download</servlet-name>
+		<servlet-class>mil.navy.safecen.sms.server.FileDownloadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>file-upload</servlet-name>
+		<servlet-class>mil.navy.safecen.sms.server.FileUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+<!-- 
+	<servlet-mapping>
+		<servlet-name>file-upload</servlet-name>
+		<url-pattern>/file-upload</url-pattern>
+	</servlet-mapping>
+ -->
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>SmsWeb.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

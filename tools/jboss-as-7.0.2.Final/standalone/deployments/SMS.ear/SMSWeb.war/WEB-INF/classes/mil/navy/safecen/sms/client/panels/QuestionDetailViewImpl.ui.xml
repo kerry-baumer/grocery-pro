@@ -1,0 +1,82 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:mil.navy.safecen.sms.client.widgets">
+	<ui:style>
+	
+	.details-img {
+		border: 1px solid #ccc;
+		padding: .3em;
+	}
+	
+	.disclosurePanelHeader {
+	  text-decoration: underline;
+	  color: black; 
+	  cursor: pointer;
+	  cursor: hand;
+	}
+	
+	.disclosurePanelContent {
+	  padding: 1em;
+	  margin-left: .3em;
+	}
+	
+	.detailsPanelContent {
+	  margin: .3em;
+	  padding: 1em;
+	}
+	
+	.detailsPanelQuestion {
+	    margin-bottom: 1em;
+	}
+	
+	.detailsImagePanel {
+		border: 1px solid #ccc;
+		padding: .3em;
+	}
+	
+	.detailsQuestionPanel {
+		margin: .5em;
+	}
+}
+
+	</ui:style>
+	
+	<ui:with field="res" type="mil.navy.safecen.sms.client.resources.SmsClientBundle" />
+	<g:DecoratorPanel>
+	<g:HTMLPanel styleName="{style.detailsPanelContent}">
+		<g:FlowPanel styleName="{style.detailsPanelQuestion}">
+			<g:ScrollPanel width="450px" height="50px" styleName="{style.detailsQuestionPanel}">
+				<g:Label text="" height="100%" ui:field="question" width="100%"/>
+			</g:ScrollPanel>
+		<my:RadioButtonGroup ui:field='answerGroup' width="100px">
+			<g:RadioButton name="answer" text="C" formValue="TRUE" ui:field="yes"/>
+			<g:RadioButton name="answer" text="R" formValue="FALSE" ui:field="no"/>
+		</my:RadioButtonGroup>
+		</g:FlowPanel>
+		
+		<g:DisclosurePanel open="true" width="100%">
+			<g:header styleName="{style.disclosurePanelHeader}">Additional Information</g:header>
+			<g:FormPanel ui:field="form">
+				<g:FlowPanel styleName="{style.disclosurePanelContent}">
+					<g:Label text="Comments:"/>
+						<g:TextArea visibleLines="10" width="300px" height="100px" ui:field="comments"/>
+					<g:Label text="Images:"/>
+				    <g:Hidden ui:field="questionId" name="questionId" iD="questionId"/>
+				    <g:Hidden ui:field="attachedFile" value="Y" name="attachedFile" iD="attachdFile"/>
+				    <g:Hidden ui:field="caption" value="Image" name="caption" iD="caption"/>
+					<!-- Upload file 				    
+					-->
+				    <g:FileUpload ui:field="image" name="image"/>
+				    <g:HorizontalPanel horizontalAlignment="ALIGN_LEFT" spacing="5" width="100%">
+						<g:PushButton text="Submit Image" ui:field="submitButton" width="80"/>
+					</g:HorizontalPanel>
+					<g:ScrollPanel styleName="{style.detailsImagePanel}" width="400px" height="200px">
+						<my:ImageDisplayPanel ui:field="imagePanel"/>
+					</g:ScrollPanel>
+				</g:FlowPanel>
+			</g:FormPanel>
+		</g:DisclosurePanel>
+	</g:HTMLPanel>
+	</g:DecoratorPanel>
+</ui:UiBinder> 

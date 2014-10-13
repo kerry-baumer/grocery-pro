@@ -1,0 +1,24 @@
+.labelText {
+    font-family: Arial Unicode MS, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.imageDetails {
+	border: 3px solid #ccc;
+	cursor: pointer;
+}
+
+.closeButton {
+	height: 16px;
+    width: 16px;
+    border: 1px solid #fff;
+}
+
+.closeButton:active {
+  border: 1px inset #ccc;
+}
+
+.closeButton:hover {
+	border: 1px solid #ccc;
+}

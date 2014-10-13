@@ -1,0 +1,92 @@
+20:12:28,567 INFO  [org.jboss.modules] JBoss Modules version 1.0.2.GA
+20:12:28,941 INFO  [org.jboss.msc] JBoss MSC version 1.0.1.GA
+20:12:29,020 INFO  [org.jboss.as] JBoss AS 7.0.2.Final "Arc" starting
+20:12:29,036 DEBUG [org.jboss.as.config] Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = C:\vortex-tng\tools\jboss-as-7.0.2.Final\jboss-modules.jar
+	java.class.version = 50.0
+	java.endorsed.dirs = C:\Program Files\Java\jre6\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jre6\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jre6
+	java.io.tmpdir = C:\Users\kerry\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jre6\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;native;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.6.0_29-b11
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Sun Microsystems Inc.
+	java.specification.version = 1.6
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Sun Microsystems Inc.
+	java.vendor.url = http://java.sun.com/
+	java.vendor.url.bug = http://java.sun.com/cgi-bin/bugreport.cgi
+	java.version = 1.6.0_29
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Sun Microsystems Inc.
+	java.vm.specification.version = 1.0
+	java.vm.vendor = Sun Microsystems Inc.
+	java.vm.version = 20.4-b02
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final
+	jboss.host.name = kerry-pc2
+	jboss.modules.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final\modules
+	jboss.node.name = kerry-pc2
+	jboss.qualified.host.name = kerry-pc2
+	jboss.server.base.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final\standalone
+	jboss.server.config.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final\standalone\configuration
+	jboss.server.data.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final\standalone\data
+	jboss.server.deploy.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final\standalone\data\content
+	jboss.server.log.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final\standalone\log
+	jboss.server.name = kerry-pc2
+	jboss.server.temp.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:C:/vortex-tng/tools/jboss-as-7.0.2.Final/standalone/configuration/logging.properties
+	module.path = C:/vortex-tng/tools/jboss-as-7.0.2.Final/modules
+	org.jboss.boot.log.file = C:/vortex-tng/tools/jboss-as-7.0.2.Final/standalone/log/boot.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 7
+	os.version = 6.1
+	path.separator = ;
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jre6\lib\resources.jar;C:\Program Files\Java\jre6\lib\rt.jar;C:\Program Files\Java\jre6\lib\sunrsasign.jar;C:\Program Files\Java\jre6\lib\jsse.jar;C:\Program Files\Java\jre6\lib\jce.jar;C:\Program Files\Java\jre6\lib\charsets.jar;C:\Program Files\Java\jre6\lib\modules\jdk.boot.jar;C:\Program Files\Java\jre6\classes
+	sun.boot.library.path = C:\Program Files\Java\jre6\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp C:/vortex-tng/tools/jboss-as-7.0.2.Final/modules -logmodule org.jboss.logmanager -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = Service Pack 1
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = US
+	user.dir = C:\vortex-tng\tools\jboss-as-7.0.2.Final\bin
+	user.home = C:\Users\kerry
+	user.language = en
+	user.name = kerry
+	user.timezone = America/New_York
+	user.variant = 
+20:12:30,050 WARN  [org.jboss.as] No security realm defined for native management service, all access will be unrestricted.
+20:12:30,129 INFO  [org.jboss.as] creating http management service using network interface (management) port (9990)
+20:12:30,129 WARN  [org.jboss.as] No security realm defined for http management service, all access will be unrestricted.
+20:12:30,144 INFO  [org.jboss.as.logging] Removing bootstrap log handlers

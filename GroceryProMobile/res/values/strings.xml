@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, GroceryProActivity!</string>
+    <string name="app_name">GroceryPro</string>
+	<string name="file">Shopping List</string>
+	<string name="create_new">Create New List</string>
+	<string name="from_template">Create From Template</string>
+</resources>

@@ -1,0 +1,69 @@
+<!DOCTYPE html
+      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xml:lang="en" lang="en">
+<head>
+</head>
+
+
+
+<h:body>
+
+	<ui:composition template="main_template.xhtml">
+		<ui:param name="title" value="Create New Survey" />
+		<ui:define name="content">
+			<h3>Create New Survey</h3>
+			<br />
+			<div align="center">
+				<h:form id="EditSurvey">
+					<table>
+						<tr>
+							<td><h:outputText value="Survey Name" /></td>
+							<td><h:inputText value="#{managedSurvey.survey.name}"
+									id="name">
+									<f:validateLength minimum="8" maximum="45" />
+								</h:inputText> <h:message for="name" errorStyle="color:red" /></td>
+						</tr>
+						<tr>
+							<td><h:outputText value="Survey Description" /></td>
+							<td><h:inputText value="#{managedSurvey.survey.description}"
+									id="description">
+									<f:validateLength minimum="8" maximum="45" />
+								</h:inputText> <h:message for="description" errorStyle="color:red" /></td>
+						</tr>
+						<tr>
+							<td><h:dataTable value="#{managedSurvey.survey.questions}" var="item" 
+								rowClasses="cellTableEvenRow,cellTableOddRow">
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Sequence Number" />
+										</f:facet>
+										<h:outputText value="#{item.seqNum}" />
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Text" />
+										</f:facet>
+										<h:outputText value="#{item.questionText}" />
+									</h:column>
+								</h:dataTable></td>
+						</tr>
+						<tr>
+							<td><h:commandButton id="cancel"
+									action="#{createSurveyBean.cancelNewSurvey}" value="Cancel" />
+								<h:commandButton id="save"
+									action="#{createSurveyBean.saveNewSurvey}" value="Save" /></td>
+						</tr>
+					</table>
+				</h:form>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+
+
+</html>

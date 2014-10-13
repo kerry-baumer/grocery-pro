@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+   <h:head>
+      <title>${title}</title>
+<style type="text/css">
+.cellTableEvenRow {
+	background: #ffffff;
+}
+
+.cellTableEvenRowCell {
+	border: none;
+}
+
+.cellTableOddRow {
+	background: #eee;
+}
+
+.cellTableOddRowCell {
+	border: none;
+}
+</style>
+   </h:head>
+
+  <body>
+    <div id="container">
+        <ui:insert name="content"/>
+    </div>
+  </body>
+</html>
